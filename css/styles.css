@@ -1,0 +1,37 @@
+body {
+    background-color: #c58888;
+    font-family: 'Alegreya SC', serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.6;
+    padding: 35px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    padding: 35px;
+    margin: auto;
+}
+
+span {
+    font-weight: 700;
+}
+
+.box {
+    width: 400px;
+    padding: 5px;
+    border: 2px solid black;
+    outline-style: solid;
+    outline-width: 2px;
+    margin: auto;
+}
+
+@media all and (max-width: 500px) {
+    .box {
+        width: 100%;
+        margin: 0;
+    }
+}
