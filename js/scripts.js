@@ -1,3 +1,4 @@
+//creates pokemonList variable with multiple objects//
 let pokemonList = [
   {
     name: "Bulbasaur",
@@ -31,18 +32,21 @@ let pokemonList = [
   },
 ];
 
+//for loop that iterates over each item in pokemonList variable//
 for (let i = 0; i < pokemonList.length; i++) {
+  //creates variable and conditional regarding size of pokemon//
   let size;
   if (pokemonList[i].height > 1.7) {
-    size = '<span>"Wow, that\'s big!"</span>';
+    size = "<span> - Wow, that's big!</span>"; //will print if size is greater than 1.7//
   } else {
-    size = "";
+    size = ""; //will not print any text if size is less than 1.7//
   }
   document.write(
-    '<div class="box">' +
+    '<div class="box">' + //HTML used within JS//
       pokemonList[i].name +
       " (height: " +
       pokemonList[i].height +
+      "m" +
       ")" +
       " " +
       size +
