@@ -3,7 +3,7 @@ let pokemonList = [
   {
     name: "Bulbasaur",
     height: 0.7,
-    types: ["grass", "poison"],
+    types: ["poison", "grass"],
   },
   {
     name: "Venusaur",
@@ -23,7 +23,7 @@ let pokemonList = [
   {
     name: "Noctowl",
     height: 1.6,
-    types: ["flying", "normal"],
+    types: ["normal", "flying"],
   },
   {
     name: "Vigoroth",
@@ -32,24 +32,48 @@ let pokemonList = [
   },
 ];
 
-//for loop that iterates over each item in pokemonList variable//
+//for loop that iterates over each item in pokemonList variable
 for (let i = 0; i < pokemonList.length; i++) {
-  //creates variable and conditional regarding size of pokemon//
+  //creates variable and conditional regarding size of pokemon
   let size;
-  if (pokemonList[i].height > 1.7) {
-    size = "<span> - Wow, that's big!</span>"; //will print if size is greater than 1.7//
+  if (pokemonList[i].height > 1.4) {
+    size = "<br><span>This is a big Pokemon</span>"; //will print if size is greater than 1.7
+  } else if (pokemonList[i].height >= 1 && pokemonList[i].height <= 1.4) {
+    size = "<br><span>This is a medium Pokemon</span>";
   } else {
-    size = ""; //will not print any text if size is less than 1.7//
+    size = "<br><span>This is a small Pokemon</span>";
   }
+
+  //for loop inside above for loop iterating over each types array
+  let color;
+  for (let k = 0; k < pokemonList[i].types.length; k++)  {
+    //conditional regarding types of pokemon
+    if (pokemonList[i].types[k] == "grass")  {
+      color = '<span style="color:green;">'; //using CSS to change color based on type
+    } else if (pokemonList[i].types[k] == "ground") {
+      color = '<span style="color:brown;">';
+    } else if (pokemonList[i].types[k] == "water") {
+      color = '<span style="color:blue;">';
+    } else if (pokemonList[i].types[k] == "flying") {
+      color = '<span style="color:lightblue;">';
+    } else if (pokemonList[i].types[k] == "normal") {
+      color = '<span style="color:orange;">';
+    } else if (pokemonList[i].types[k] == "poison") {
+      color = '<span style="color:purple;">';
+    }
+  }
+
   document.write(
-    '<div class="box">' + //HTML used within JS//
+    '<div class="box">' + //HTML used within JS
       pokemonList[i].name +
       " (height: " +
       pokemonList[i].height +
       "m" +
       ")" +
       " " +
-      size +
+      size + '<br>'
+      + color +
+      pokemonList[i].types +
       " " +
       "</div>"
   );
