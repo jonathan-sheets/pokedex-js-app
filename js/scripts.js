@@ -32,49 +32,47 @@ let pokemonList = [
   },
 ];
 
-//for loop that iterates over each item in pokemonList variable
-for (let i = 0; i < pokemonList.length; i++) {
-  //creates variable and conditional regarding size of pokemon
+// forEach loop that iterates over each item in pokemonList variable
+pokemonList.forEach(function(pokemon) {
   let size;
-  if (pokemonList[i].height > 1.4) {
-    size = "<br><span>This is a big Pokemon</span>"; //will print if size is greater than 1.7
-  } else if (pokemonList[i].height >= 1 && pokemonList[i].height <= 1.4) {
+  if (pokemon.height > 1.4) {
+    size = "<br><span>This is a big Pokemon</span>";
+  } else if (pokemon.height >= 1 && pokemon.height <= 1.4) {
     size = "<br><span>This is a medium Pokemon</span>";
   } else {
     size = "<br><span>This is a small Pokemon</span>";
   }
 
-  //for loop inside above for loop iterating over each types array
+  //forEach loop inside above forEach loop iterating over each types array
   let color;
-  for (let k = 0; k < pokemonList[i].types.length; k++)  {
-    //conditional regarding types of pokemon
-    if (pokemonList[i].types[k] == "grass")  {
-      color = '<span style="color:green;">'; //using CSS to change color based on type
-    } else if (pokemonList[i].types[k] == "ground") {
-      color = '<span style="color:brown;">';
-    } else if (pokemonList[i].types[k] == "water") {
-      color = '<span style="color:blue;">';
-    } else if (pokemonList[i].types[k] == "flying") {
-      color = '<span style="color:lightblue;">';
-    } else if (pokemonList[i].types[k] == "normal") {
-      color = '<span style="color:orange;">';
-    } else if (pokemonList[i].types[k] == "poison") {
-      color = '<span style="color:purple;">';
+  pokemon.types.forEach(function(pokemonType)  {
+    if (pokemonType == "grass")  {
+      color = '<span style="color:#81be71;">';
+    } else if (pokemonType == "ground") {
+      color = '<span style="color:#714f32;">';
+    } else if (pokemonType == "water") {
+      color = '<span style="color:#1242b2;">';
+    } else if (pokemonType == "flying") {
+      color = '<span style="color:#02d5e9;">';
+    } else if (pokemonType == "normal") {
+      color = '<span style="color:#ff8900;">';
+    } else if (pokemonType == "poison") {
+      color = '<span style="color:#9b07ec;">';
     }
-  }
+  });
 
   document.write(
-    '<div class="box">' + //HTML used within JS
-      pokemonList[i].name +
+    '<div class="box">' +
+      pokemon.name +
       " (height: " +
-      pokemonList[i].height +
+      pokemon.height +
       "m" +
       ")" +
       " " +
       size + '<br>'
       + color +
-      pokemonList[i].types +
+      pokemon.types +
       " " +
       "</div>"
   );
-}
+});
