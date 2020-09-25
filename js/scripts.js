@@ -49,13 +49,13 @@ pokemonList.forEach(function(pokemon) {
     if (pokemonType == "grass")  {
       color = '<span style="color:#81be71;">';
     } else if (pokemonType == "ground") {
-      color = '<span style="color:#714f32;">';
+      color = '<span style="color:#461401;">';
     } else if (pokemonType == "water") {
       color = '<span style="color:#1242b2;">';
     } else if (pokemonType == "flying") {
       color = '<span style="color:#02d5e9;">';
     } else if (pokemonType == "normal") {
-      color = '<span style="color:#ff8900;">';
+      color = '<span style="color:#ff2222;">';
     } else if (pokemonType == "poison") {
       color = '<span style="color:#9b07ec;">';
     }
