@@ -21,7 +21,7 @@ span {
 }
 
 .box {
-    width: 600px;
+    max-width: 600px;
     padding: 5px;
     border: 2px solid black;
     outline-style: solid;
