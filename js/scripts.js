@@ -47,9 +47,19 @@ let pokemonRepository = (function () {
   function getAll() {
     return pokemonList;
   }
+  function addListItem(pokemon) {
+    let list = document.querySelector(".pokemon-list");
+    let listItem = document.createElement("li");
+    let button = document.createElement("button");
+    button.innerText = pokemon.name;
+    button.classList.add("button");
+    listItem.appendChild(button);
+    list.appendChild(listItem);
+  }
   return {
     add: add,
     getAll: getAll,
+    addListItem: addListItem,
   };
 })();
 
@@ -59,14 +69,6 @@ console.log(pokemonRepository.getAll());
 
 // forEach loop that iterates over each item in pokemonList variable
 pokemonRepository.getAll().forEach(function (pokemon) {
-  let list = document.querySelector('ul');
-  let listItem = document.createElement('li');
-  let button = document.createElement('button');
-  button.innerText = pokemon.name;
-  button.classList.add('button');
-  listItem.appendChild(button);
-  list.appendChild(listItem);
-
   let size;
   if (pokemon.height > 1.4) {
     size = "<br><span>This is a big Pokemon</span>";
@@ -77,24 +79,26 @@ pokemonRepository.getAll().forEach(function (pokemon) {
   }
 
   //forEach loop inside above forEach loop iterating over each types array
-  // let color;
-  // pokemon.types.forEach(function (pokemonType) {
-  //   if (pokemonType == "grass") {
-  //     color = '<span style="color:#81be71;">';
-  //   } else if (pokemonType == "ground") {
-  //     color = '<span style="color:#461401;">';
-  //   } else if (pokemonType == "water") {
-  //     color = '<span style="color:#1242b2;">';
-  //   } else if (pokemonType == "flying") {
-  //     color = '<span style="color:#02d5e9;">';
-  //   } else if (pokemonType == "normal") {
-  //     color = '<span style="color:#ff2222;">';
-  //   } else if (pokemonType == "poison") {
-  //     color = '<span style="color:#9b07ec;">';
-  //   } else if (pokemonType == "electric") {
-  //     color = '<span style="color:#ffff00;">';
-  //   }
-  // });
+  let color;
+  pokemon.types.forEach(function (pokemonType) {
+    if (pokemonType == "grass") {
+      color = '<span style="color:#81be71;">';
+    } else if (pokemonType == "ground") {
+      color = '<span style="color:#461401;">';
+    } else if (pokemonType == "water") {
+      color = '<span style="color:#1242b2;">';
+    } else if (pokemonType == "flying") {
+      color = '<span style="color:#02d5e9;">';
+    } else if (pokemonType == "normal") {
+      color = '<span style="color:#ff2222;">';
+    } else if (pokemonType == "poison") {
+      color = '<span style="color:#9b07ec;">';
+    } else if (pokemonType == "electric") {
+      color = '<span style="color:#ffff00;">';
+    }
+  });
+  pokemonRepository.addListItem(pokemon);
+});
 
   // document.write(
   //   '<div class="box">' +
@@ -111,4 +115,4 @@ pokemonRepository.getAll().forEach(function (pokemon) {
   //     " " +
   //     "</div>"
   // );
-});
+//});
