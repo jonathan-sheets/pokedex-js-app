@@ -1,35 +1,21 @@
 body {
     background-color: #c58888;
-    font-family: 'Alegreya SC', serif;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.6;
     padding: 35px;
     padding-top: 15px;
     text-align: center;
 }
 
 .logo {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     padding: 35px;
     margin: auto;
 }
 
-span {
-    font-weight: 400;
-}
-
-.box {
-    max-width: 600px;
-    padding: 5px;
-    border: 2px solid black;
-    outline-style: solid;
-    outline-width: 2px;
-    margin: auto;
-}
-
 ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -39,10 +25,12 @@ ul {
     background-color: #b1b0b0;
     border: 2px solid black;
     border-radius: 10px;
-    font-size: 16px;
+    font-family: 'Alegreya SC', serif;
+    font-size: 20px;
+    font-weight: 700px;
     padding: 12px;
     margin: 5px;
-    width: 250px;
+    width: 240px;
     text-align: center;
     transition-duration: 0.4s;
 }
@@ -53,8 +41,25 @@ ul {
 }
 
 @media all and (max-width: 500px) {
-    .box {
-        width: 100%;
-        margin: 0;
+    ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+    ul {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (min-width: 750px) and (max-width: 1000px) {
+    ul {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media all and (min-width: 1000px) and (max-width: 1250px) {
+    ul {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
