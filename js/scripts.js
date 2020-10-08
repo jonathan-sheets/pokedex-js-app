@@ -1,7 +1,7 @@
 // IIFE
 let pokemonRepository = (function () {
   let pokemonList = [];
-  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150";
+  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=500";
   let modalContainer = document.querySelector("#modal-container");
 
   function add(pokemon) {
@@ -113,17 +113,60 @@ let pokemonRepository = (function () {
     let typesElement = document.createElement("p");
     typesElement.innerText = "Types: " + pokemon.types;
     if (pokemon.types.includes("grass")) {
-      modal.style.backgroundColor = 'rgb(' + 0 + ',' + 211 + ',' + 0 + ',' + 0.75 + ')';
+      modal.style.backgroundColor =
+        "rgb(" + 0 + "," + 211 + "," + 0 + "," + 0.75 + ")";
     } else if (pokemon.types.includes("fire")) {
-      modal.style.backgroundColor = 'rgb(' + 255 + ',' + 0 + ',' + 0 + ',' + 0.75 + ')';
+      modal.style.backgroundColor =
+        "rgb(" + 255 + "," + 0 + "," + 0 + "," + 0.75 + ")";
     } else if (pokemon.types.includes("electric")) {
-      modal.style.background = "yellow";
+      modal.style.background =
+        "rgb(" + 243 + "," + 241 + "," + 0 + "," + 0.75 + ")";
     } else if (pokemon.types.includes("poison")) {
-      modal.style.background = "purple";
+      modal.style.background =
+        "rgb(" + 137 + "," + 2 + "," + 211 + "," + 0.75 + ")";
     } else if (pokemon.types.includes("flying")) {
-      modal.style.background = "lightblue";
+      modal.style.background =
+        "rgb(" + 2 + "," + 155 + "," + 255 + "," + 0.75 + ")";
     } else if (pokemon.types.includes("water")) {
-      modal.style.background = "blue";
+      modal.style.background =
+        "rgb(" + 3 + "," + 52 + "," + 255 + "," + 0.75 + ")";
+    } else if (pokemon.types.includes("normal")) {
+      modal.style.background =
+        "rgb(" + 255 + "," + 151 + "," + 0 + "," + 0.75 + ")";
+    } else if (pokemon.types.includes("fighting")) {
+      modal.style.background =
+        "rgb(" + 242 + "," + 0 + "," + 137 + "," + 0.75 + ")";
+    } else if (pokemon.types.includes("ground")) {
+      modal.style.background =
+        "rgb(" + 179 + "," + 87 + "," + 0 + "," + 0.75 + ")";
+    } else if (pokemon.types.includes("rock")) {
+      modal.style.background =
+        "rgb(" + 161 + "," + 149 + "," + 137 + "," + 0.75 + ")";
+    } else if (pokemon.types.includes("bug")) {
+      modal.style.background =
+        "rgb(" + 163 + "," + 88 + "," + 142 + "," + 0.75 + ")";
+    } else if (pokemon.types.includes("ghost")) {
+      modal.style.background =
+        "rgb(" + 255 + "," + 255 + "," + 255 + "," + 0.75 + ")";
+    } else if (pokemon.types.includes("steel")) {
+      modal.style.background =
+        "rgb(" + 132 + "," +132 + "," + 132 + "," + 0.75 + ")";
+    } else if (pokemon.types.includes("psychic")) {
+      modal.style.background =
+        "rgb(" + 235 + "," + 95 + "," + 80 + "," + 0.75 + ")";
+    } else if (pokemon.types.includes("ice")) {
+      modal.style.background =
+        "rgb(" + 19 + "," + 131 + "," + 255 + "," + 0.75 + ")";
+    } else if (pokemon.types.includes("dragon")) {
+      modal.style.background =
+        "rgb(" + 250 + "," + 103 + "," + 44 + "," + 0.75 + ")";
+    } else if (pokemon.types.includes("dark")) {
+      modal.style.background =
+        "rgb(" + 50 + "," + 50 + "," + 50 + "," + 0.75 + ")";
+        modal.style.color = "white";
+    } else if (pokemon.types.includes("fairy")) {
+      modal.style.background =
+        "rgb(" + 229 + "," + 131 + "," + 229 + "," + 0.75 + ")";
     }
     let abilitiesElement = document.createElement("p");
     abilitiesElement.innerText = "Abilities: " + pokemon.abilities;
