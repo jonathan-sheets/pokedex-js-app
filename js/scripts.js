@@ -124,12 +124,14 @@ let pokemonRepository = (function () {
     } else if (pokemon.types.includes("poison")) {
       modal.style.background =
         "rgb(" + 137 + "," + 2 + "," + 211 + "," + 0.75 + ")";
+        modal.style.color = "white";
     } else if (pokemon.types.includes("flying")) {
       modal.style.background =
         "rgb(" + 2 + "," + 155 + "," + 255 + "," + 0.75 + ")";
     } else if (pokemon.types.includes("water")) {
       modal.style.background =
         "rgb(" + 3 + "," + 52 + "," + 255 + "," + 0.75 + ")";
+        modal.style.color = "white";
     } else if (pokemon.types.includes("normal")) {
       modal.style.background =
         "rgb(" + 255 + "," + 151 + "," + 0 + "," + 0.75 + ")";
@@ -139,12 +141,14 @@ let pokemonRepository = (function () {
     } else if (pokemon.types.includes("ground")) {
       modal.style.background =
         "rgb(" + 179 + "," + 87 + "," + 0 + "," + 0.75 + ")";
+        modal.style.color = "white";
     } else if (pokemon.types.includes("rock")) {
       modal.style.background =
         "rgb(" + 161 + "," + 149 + "," + 137 + "," + 0.75 + ")";
     } else if (pokemon.types.includes("bug")) {
       modal.style.background =
         "rgb(" + 163 + "," + 88 + "," + 142 + "," + 0.75 + ")";
+        modal.style.color = "white";
     } else if (pokemon.types.includes("ghost")) {
       modal.style.background =
         "rgb(" + 255 + "," + 255 + "," + 255 + "," + 0.75 + ")";
