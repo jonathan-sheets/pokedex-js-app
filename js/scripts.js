@@ -62,62 +62,61 @@ let pokemonRepository = (function () {
         for (let i = 0; i < details.types.length; i++) {
           pokemon.types.push(details.types[i].type.name);
         }
-        // if (pokemon.types.includes("grass")) {
-        //   $('#modal-container').css("background-color",
-        //     "rgb(" + 0 + "," + 211 + "," + 0 + "," + 0.75 + ")");
-        // } else if (pokemon.types.includes("fire")) {
-        //   $('#modal-container').css("background-color",
-        //     "rgb(" + 255 + "," + 0 + "," + 0 + "," + 0.75 + ")");
-        // } else if (pokemon.types.includes("electric")) {
-        //   $('#modal-container').css("background-color",
-        //     "rgb(" + 243 + "," + 241 + "," + 0 + "," + 0.75 + ")");
-        // } else if (pokemon.types.includes("poison")) {
-        //   $('#modal-container').css("background-color",
-        //     "rgb(" + 137 + "," + 2 + "," + 211 + "," + 0.75 + ")");
-        //   $('#modal-container').css("background-color", "white");
-        // } else if (pokemon.types.includes("flying")) {
-        //   $('#modal-container').css("background-color",
-        //     "rgb(" + 2 + "," + 155 + "," + 255 + "," + 0.75 + ")");
-        // } else if (pokemon.types.includes("water")) {
-        //   $('#modal-container').css("background-color",
-        //     "rgb(" + 3 + "," + 52 + "," + 255 + "," + 0.75 + ")");
-        // } else if (pokemon.types.includes("normal")) {
-        //   $('#modal-container').css("background-color",
-        //     "rgb(" + 255 + "," + 151 + "," + 0 + "," + 0.75 + ")");
-        // } else if (pokemon.types.includes("fighting")) {
-        //   $('#modal-container').css("background-color",
-        //     "rgb(" + 242 + "," + 0 + "," + 137 + "," + 0.75 + ")");
-        // } else if (pokemon.types.includes("ground")) {
-        //   $('#modal-container').css("background-color",
-        //     "rgb(" + 179 + "," + 87 + "," + 0 + "," + 0.75 + ")");
-        // } else if (pokemon.types.includes("rock")) {
-        //   $('#modal-container').css("background-color",
-        //     "rgb(" + 161 + "," + 149 + "," + 137 + "," + 0.75 + ")");
-        // } else if (pokemon.types.includes("bug")) {
-        //   $('#modal-container').css("background-color",
-        //     "rgb(" + 163 + "," + 88 + "," + 142 + "," + 0.75 + ")");
-        // } else if (pokemon.types.includes("ghost")) {
-        //   $('#modal-container').css("background-color",
-        //     "rgb(" + 255 + "," + 255 + "," + 255 + "," + 0.75 + ")");
-        // } else if (pokemon.types.includes("steel")) {
-        //   $('#modal-container').css("background-color",
-        //     "rgb(" + 132 + "," +132 + "," + 132 + "," + 0.75 + ")");
-        // } else if (pokemon.types.includes("psychic")) {
-        //   $('#modal-container').css("background-color",
-        //     "rgb(" + 235 + "," + 95 + "," + 80 + "," + 0.75 + ")");
-        // } else if (pokemon.types.includes("ice")) {
-        //   $('#modal-container').css("background-color",
-        //     "rgb(" + 19 + "," + 131 + "," + 255 + "," + 0.75 + ")");
-        // } else if (pokemon.types.includes("dragon")) {
-        //   $('#modal-container').css("background-color",
-        //     "rgb(" + 250 + "," + 103 + "," + 44 + "," + 0.75 + ")");
-        // } else if (pokemon.types.includes("dark")) {
-        //   $('#modal-container').css("background-color",
-        //     "rgb(" + 50 + "," + 50 + "," + 50 + "," + 0.75 + ")");
-        // } else if (pokemon.types.includes("fairy")) {
-        //   $('#modal-container').css("background-color",
-        //     "rgb(" + 229 + "," + 131 + "," + 229 + "," + 0.75 + ")");
-        // }
+        if (pokemon.types.includes("grass")) {
+          $('#modal-container').css("background-color",
+            "rgb(" + 0 + "," + 211 + "," + 0 + "," + 0.75 + ")");
+        } else if (pokemon.types.includes("fire")) {
+          $('#modal-container').css("background-color",
+            "rgb(" + 255 + "," + 0 + "," + 0 + "," + 0.75 + ")");
+        } else if (pokemon.types.includes("electric")) {
+          $('#modal-container').css("background-color",
+            "rgb(" + 243 + "," + 241 + "," + 0 + "," + 0.75 + ")");
+        } else if (pokemon.types.includes("poison")) {
+          $('#modal-container').css("background-color", 
+            "rgb(" + 137 + "," + 2 + "," + 211 + "," + 0.75 + ")");
+        } else if (pokemon.types.includes("flying")) {
+          $('#modal-container').css("background-color",
+            "rgb(" + 2 + "," + 155 + "," + 255 + "," + 0.75 + ")");
+        } else if (pokemon.types.includes("water")) {
+          $('#modal-container').css("background-color",
+            "rgb(" + 3 + "," + 52 + "," + 255 + "," + 0.75 + ")");
+        } else if (pokemon.types.includes("normal")) {
+          $('#modal-container').css("background-color",
+            "rgb(" + 255 + "," + 151 + "," + 0 + "," + 0.75 + ")");
+        } else if (pokemon.types.includes("fighting")) {
+          $('#modal-container').css("background-color",
+            "rgb(" + 242 + "," + 0 + "," + 137 + "," + 0.75 + ")");
+        } else if (pokemon.types.includes("ground")) {
+          $('#modal-container').css("background-color",
+            "rgb(" + 179 + "," + 87 + "," + 0 + "," + 0.75 + ")");
+        } else if (pokemon.types.includes("rock")) {
+          $('#modal-container').css("background-color",
+            "rgb(" + 161 + "," + 149 + "," + 137 + "," + 0.75 + ")");
+        } else if (pokemon.types.includes("bug")) {
+          $('#modal-container').css("background-color",
+            "rgb(" + 163 + "," + 88 + "," + 142 + "," + 0.75 + ")");
+        } else if (pokemon.types.includes("ghost")) {
+          $('#modal-container').css("background-color",
+            "rgb(" + 255 + "," + 255 + "," + 255 + "," + 0.75 + ")");
+        } else if (pokemon.types.includes("steel")) {
+          $('#modal-container').css("background-color",
+            "rgb(" + 132 + "," +132 + "," + 132 + "," + 0.75 + ")");
+        } else if (pokemon.types.includes("psychic")) {
+          $('#modal-container').css("background-color",
+            "rgb(" + 235 + "," + 95 + "," + 80 + "," + 0.75 + ")");
+        } else if (pokemon.types.includes("ice")) {
+          $('#modal-container').css("background-color",
+            "rgb(" + 19 + "," + 131 + "," + 255 + "," + 0.75 + ")");
+        } else if (pokemon.types.includes("dragon")) {
+          $('#modal-container').css("background-color",
+            "rgb(" + 250 + "," + 103 + "," + 44 + "," + 0.75 + ")");
+        } else if (pokemon.types.includes("dark")) {
+          $('#modal-container').css("background-color",
+            "rgb(" + 50 + "," + 50 + "," + 50 + "," + 0.75 + ")");
+        } else if (pokemon.types.includes("fairy")) {
+          $('#modal-container').css("background-color",
+            "rgb(" + 229 + "," + 131 + "," + 229 + "," + 0.75 + ")");
+        }
         pokemon.abilities = [];
         for (let i = 0; i < details.abilities.length; i++) {
           pokemon.abilities.push(details.abilities[i].ability.name);
