@@ -25,7 +25,8 @@ ul {
     font-weight: 700px;
     padding: 12px;
     margin: 5px;
-    width: 240px;
+    width: 400px;
+    height: 120px;
     text-align: center;
     transition-duration: 0.4s;
 }
@@ -50,7 +51,6 @@ ul {
     font-family: 'Alegreya SC', serif;
     border: 3px solid black;
 }
- 
 
 /* .modal p {
     text-align: center;
@@ -79,8 +79,6 @@ ul {
     width: 55%;
     height: auto;
 }
-
-
 
 /* @media all and (max-width: 500px) {
     ul {
