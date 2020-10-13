@@ -141,13 +141,13 @@ let pokemonRepository = (function () {
     let $modalTitle = $(".modal-title");
 
     $('#pokedexModal').modal('show');
-    
+
     // to clear the content of the modal
     $modalTitle.empty();
     $modalBody.empty();
 
     let nameElement = $("<h1>" + pokemon.name + "</h1>");
-    let imageElement = $('<img class="modal-img">');
+    let imageElement = $('<img class="modal-img" alt="pokemon image">');
     imageElement.attr("src", pokemon.imageUrl);
     // let imageElementBack = $('<img class="modal-img-back">');
     // imageElementBack.attr("src", pokemon.imageUrlBack);
