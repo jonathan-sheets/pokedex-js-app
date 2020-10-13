@@ -11,14 +11,30 @@
         <link 
             href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@400;700&display=swap" rel="stylesheet"
         />
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     </head>
     <body>
         <header class="page-header">
-        <img class="logo" src=img/pokemon_logo.png alt="Pokemon ball logo">
+            <div class="container">
+                <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                    <a class="navbar-brand" href="#">Navigation</a>
+                </nav>
+            </div>
+            <img 
+                class="img-fluid d-none d-md-block" 
+                src=img/pokedex_logo.png 
+                alt="Pokedex logo"
+            >
+            <img
+                class="ball-logo img-fluid d-md-none"
+                src="img/pokemon_logo.png"
+                alt="Pokemon ball logo"
+            >
         </header>
-
-        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#pokedexModal">Launch Demo</button> -->
-
+        <hr>
+        <br>
+        <p>Click on a Poke&#769;mon to see some stats!</p>
+        <br>
         <div
             class="modal fade"
             id="pokedexModal"
