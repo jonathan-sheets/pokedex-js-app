@@ -5,11 +5,32 @@ body {
     text-align: center;
 }
 
-.logo {
-    width: 150px;
-    height: 150px;
-    padding: 35px;
-    margin: auto;
+p {
+    font-family: 'Alegreya SC', serif;
+    font-size: 24px;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-color: black;
+    opacity: 40%;
+}
+
+.img-fluid {
+    max-width: 60%;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 65px;
+    margin: 0 auto;
+}
+
+.ball-logo {
+    max-width: 45%;
+    height: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin: 0 auto;
 }
 
 .btn {
@@ -36,6 +57,7 @@ body {
     width: auto;
     height: 70%;
     float: right;
+    margin-right: 10px;
 }
 
 h5.modal-title {
