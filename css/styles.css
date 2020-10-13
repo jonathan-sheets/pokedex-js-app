@@ -5,7 +5,7 @@ body {
     text-align: center;
 }
 
-p {
+h1 {
     font-family: 'Alegreya SC', serif;
     font-size: 24px;
 }
@@ -58,6 +58,10 @@ hr {
     height: 70%;
     float: right;
     margin-right: 10px;
+}
+
+.btn-secondary {
+    border-radius: 6px;
 }
 
 h5.modal-title {
