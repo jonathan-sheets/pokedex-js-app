@@ -1,0 +1,91 @@
+body {
+    background-color: #c58888;
+    padding: 35px;
+    padding-top: 15px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Alegreya SC', serif;
+    font-size: 24px;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-color: black;
+    opacity: 40%;
+}
+
+.img-fluid {
+    max-width: 60%;
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 65px;
+    margin: 0 auto;
+}
+
+.ball-logo {
+    max-width: 45%;
+    height: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin: 0 auto;
+}
+
+.btn {
+    background-color: #b1b0b0;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-family: 'Alegreya SC', serif;
+    font-size: 24px;
+    font-weight: 700px;
+    text-align: left;
+    margin: 8px;
+    width: 260px;
+    height: 80px;
+    transition-duration: 0.4s;
+}
+
+.btn:hover {
+    background-color: #595555;
+    color: white;
+    cursor: pointer;
+}
+
+.button-icon {
+    width: auto;
+    height: 70%;
+    float: right;
+    margin-right: 10px;
+}
+
+.btn-secondary {
+    border-radius: 6px;
+}
+
+h5.modal-title {
+    margin-left: auto;
+    margin-right: -40px;
+}
+
+.modal-content {
+    font-family: 'Alegreya SC', serif;
+    font-weight: 700px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.modal-img {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 30px;
+    width: 55%;
+    height: auto;
+}
+
+.list-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
