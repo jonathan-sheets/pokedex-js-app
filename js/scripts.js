@@ -1,7 +1,7 @@
 // IIFE
 let pokemonRepository = (function () {
   let pokemonList = [];
-  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150";
+  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=500";
   
 
   function add(pokemon) {
@@ -19,7 +19,7 @@ let pokemonRepository = (function () {
   function addListItem(pokemon) {
     pokemonRepository.loadDetails(pokemon).then(function () {
       let $pokemonList = $(".pokemon-list");
-      let $listItem = $("<li>");
+      let $listItem = $('<li id="list">');
       let $button = $('<button>' + pokemon.name + '</button>');
       let $image = $('<img class="button-icon" alt="button image" />');
       $image.attr("src", pokemon.imageUrl);
@@ -69,58 +69,58 @@ let pokemonRepository = (function () {
         for (let i = 0; i < details.types.length; i++) {
           pokemon.types.push(details.types[i].type.name);
         }
-        if (pokemon.types.includes("grass")) {
+        if (pokemon.types[0].includes("grass")) {
           $('.modal-body, .modal-header, .modal-footer').css("background-color",
             "rgb(" + 0 + "," + 211 + "," + 0 + "," + 0.75 + ")");
-        } else if (pokemon.types.includes("fire")) {
+        } else if (pokemon.types[0].includes("fire")) {
           $('.modal-body, .modal-header, .modal-footer').css("background-color",
             "rgb(" + 255 + "," + 0 + "," + 0 + "," + 0.75 + ")");
-        } else if (pokemon.types.includes("electric")) {
+        } else if (pokemon.types[0].includes("electric")) {
           $('.modal-body, .modal-header, .modal-footer').css("background-color",
             "rgb(" + 243 + "," + 241 + "," + 0 + "," + 0.75 + ")");
-        } else if (pokemon.types.includes("poison")) {
+        } else if (pokemon.types[0].includes("poison")) {
           $('.modal-body, .modal-header, .modal-footer').css("background-color", 
             "rgb(" + 137 + "," + 2 + "," + 211 + "," + 0.75 + ")");
-        } else if (pokemon.types.includes("flying")) {
+        } else if (pokemon.types[0].includes("flying")) {
           $('.modal-body, .modal-header, .modal-footer').css("background-color",
             "rgb(" + 2 + "," + 155 + "," + 255 + "," + 0.75 + ")");
-        } else if (pokemon.types.includes("water")) {
+        } else if (pokemon.types[0].includes("water")) {
           $('.modal-body, .modal-header, .modal-footer').css("background-color",
             "rgb(" + 3 + "," + 52 + "," + 255 + "," + 0.75 + ")");
-        } else if (pokemon.types.includes("normal")) {
+        } else if (pokemon.types[0].includes("normal")) {
           $('.modal-body, .modal-header, .modal-footer').css("background-color",
             "rgb(" + 255 + "," + 151 + "," + 0 + "," + 0.75 + ")");
-        } else if (pokemon.types.includes("fighting")) {
+        } else if (pokemon.types[0].includes("fighting")) {
           $('.modal-body, .modal-header, .modal-footer').css("background-color",
             "rgb(" + 242 + "," + 0 + "," + 137 + "," + 0.75 + ")");
-        } else if (pokemon.types.includes("ground")) {
+        } else if (pokemon.types[0].includes("ground")) {
           $('.modal-body, .modal-header, .modal-footer').css("background-color",
             "rgb(" + 179 + "," + 87 + "," + 0 + "," + 0.75 + ")");
-        } else if (pokemon.types.includes("rock")) {
+        } else if (pokemon.types[0].includes("rock")) {
           $('.modal-body, .modal-header, .modal-footer').css("background-color",
             "rgb(" + 161 + "," + 149 + "," + 137 + "," + 0.75 + ")");
-        } else if (pokemon.types.includes("bug")) {
+        } else if (pokemon.types[0].includes("bug")) {
           $('.modal-body, .modal-header, .modal-footer').css("background-color",
             "rgb(" + 163 + "," + 88 + "," + 142 + "," + 0.75 + ")");
-        } else if (pokemon.types.includes("ghost")) {
+        } else if (pokemon.types[0].includes("ghost")) {
           $('.modal-body, .modal-header, .modal-footer').css("background-color",
             "rgb(" + 255 + "," + 255 + "," + 255 + "," + 0.75 + ")");
-        } else if (pokemon.types.includes("steel")) {
+        } else if (pokemon.types[0].includes("steel")) {
           $('.modal-body, .modal-header, .modal-footer').css("background-color",
             "rgb(" + 132 + "," +132 + "," + 132 + "," + 0.75 + ")");
-        } else if (pokemon.types.includes("psychic")) {
+        } else if (pokemon.types[0].includes("psychic")) {
           $('.modal-body, .modal-header, .modal-footer').css("background-color",
             "rgb(" + 235 + "," + 95 + "," + 80 + "," + 0.75 + ")");
-        } else if (pokemon.types.includes("ice")) {
+        } else if (pokemon.types[0].includes("ice")) {
           $('.modal-body, .modal-header, .modal-footer').css("background-color",
             "rgb(" + 19 + "," + 131 + "," + 255 + "," + 0.75 + ")");
-        } else if (pokemon.types.includes("dragon")) {
+        } else if (pokemon.types[0].includes("dragon")) {
           $('.modal-body, .modal-header, .modal-footer').css("background-color",
             "rgb(" + 250 + "," + 103 + "," + 44 + "," + 0.75 + ")");
-        } else if (pokemon.types.includes("dark")) {
+        } else if (pokemon.types[0].includes("dark")) {
           $('.modal-body, .modal-header, .modal-footer').css("background-color",
             "rgb(" + 50 + "," + 50 + "," + 50 + "," + 0.75 + ")");
-        } else if (pokemon.types.includes("fairy")) {
+        } else if (pokemon.types[0].includes("fairy")) {
           $('.modal-body, .modal-header, .modal-footer').css("background-color",
             "rgb(" + 229 + "," + 131 + "," + 229 + "," + 0.75 + ")");
         }
@@ -182,3 +182,23 @@ pokemonRepository.loadList().then(function () {
     pokemonRepository.addListItem(pokemon);
   });
 });
+
+function myFunction() {
+  let input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.querySelectorAll("#list");
+  // console.log(li[0].querySelector("#test").getElementsByTagName("button")[0]);
+  // li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("button")[0];
+    console.log(a.innerText);
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
